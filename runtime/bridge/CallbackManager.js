@@ -46,7 +46,7 @@ export default class CallbackManager {
     return callback
   }
   registerHook (componentId, type, hookName, hookFunction) {
-    // TODO: validate arguments
+    // TODO: validate arguments id:164
     const key = getHookKey(componentId, type, hookName)
     if (this.hooks[key]) {
       console.warn(`[JS Framework] Override an existing component hook "${key}".`)
@@ -54,7 +54,7 @@ export default class CallbackManager {
     this.hooks[key] = hookFunction
   }
   triggerHook (componentId, type, hookName, args) {
-    // TODO: validate arguments
+    // TODO: validate arguments id:95
     const key = getHookKey(componentId, type, hookName)
     const hookFunction = this.hooks[key]
     if (typeof hookFunction !== 'function') {

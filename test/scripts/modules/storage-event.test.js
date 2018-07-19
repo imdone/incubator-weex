@@ -25,7 +25,7 @@ describe('weex '+goal+' test', function () {
   })
 
   it('#1 '+goal + ' event', () => {
-    //TODO ：截图比对
+    //TODO ：截图比对 id:100
     return driver.waitForElementByName('setItem', timeout, 2000)
       .click()
       .waitForElementByName('setItem success', timeout, 2000)

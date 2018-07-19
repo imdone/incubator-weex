@@ -175,7 +175,7 @@ public abstract class BaseBounceView<T extends View> extends FrameLayout {
             }
         }
     }
-    //TODO There are bugs, will be more than a rolling height
+    //TODO There are bugs, will be more than a rolling height id:52
     public void removeHeaderView(WXComponent refresh){
         setRefreshEnable(false);
         if(swipeLayout!=null){

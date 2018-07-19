@@ -35,7 +35,7 @@ describe('weex '+goal+' test', function () {
       .waitForElementByName('unshift', timeout, 2000)
       .click()
       .waitForElementByName('List-unshift-6', timeout, 2000)
-      //TODO 判断view高度
+      //TODO 判断view高度 id:103
       .waitForElementByName('shift', timeout, 2000)
       .click().sleep(1000)
       .elementByNameOrNull('List-unshift-6').then((els)=>{

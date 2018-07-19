@@ -340,7 +340,7 @@ final class DecodedBitStreamParser {
               priorToShiftMode = subMode;
               subMode = Mode.PUNCT_SHIFT;
             } else if (subModeCh == MODE_SHIFT_TO_BYTE_COMPACTION_MODE) {
-              // TODO Does this need to use the current character encoding? See other occurrences below
+              // TODO Does this need to use the current character encoding? See other occurrences below id:30
               result.append((char) byteCompactionData[i]);
             } else if (subModeCh == TEXT_COMPACTION_MODE_LATCH) {
               subMode = Mode.ALPHA;

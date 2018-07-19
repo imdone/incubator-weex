@@ -676,7 +676,7 @@ class JNIFromJavaSource(object):
   def _RemoveComments(cls, contents):
     # We need to support both inline and block comments, and we need to handle
     # strings that contain '//' or '/*'.
-    # TODO(bulach): This is a bit hacky. It would be cleaner to use a real Java
+    # TODO (bulach): This is a bit hacky. It would be cleaner to use a real Java id:102
     # parser. Maybe we could ditch JNIFromJavaSource and just always use
     # JNIFromJavaP; or maybe we could rewrite this script in Java and use APT.
     # http://code.google.com/p/chromium/issues/detail?id=138941

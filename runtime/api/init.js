@@ -289,7 +289,7 @@ function adaptMethod (methodName, sharedMethod) {
       sharedMethod(...args)
     }
 
-    // TODO: deprecated
+    // TODO: deprecated id:92
     for (const name in runtimeConfig.frameworks) {
       const framework = runtimeConfig.frameworks[name]
       if (framework && framework[methodName]) {

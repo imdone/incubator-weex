@@ -237,8 +237,8 @@ WX_EXPORT_METHOD(@selector(setListData:))
 }
 - (void)insertData:(NSUInteger)index data:(id)data
 {
-    // TODO: bring the update logic to UpdateManager
-    // TODO: update cell because index has changed
+    // TODO: bring the update logic to UpdateManager id:115
+    // TODO: update cell because index has changed id:62
     NSMutableArray *newListData = [[_dataManager data] mutableCopy];
     if (index <= newListData.count) {
         [newListData insertObject:data atIndex:index];
@@ -298,7 +298,7 @@ WX_EXPORT_METHOD(@selector(setListData:))
         return;
     }
     
-    // TODO: bring the update logic to UpdateManager
+    // TODO: bring the update logic to UpdateManager id:61
     newListData[index] = data;
     [_dataManager updateData:newListData];
     NSString* virtualComponentId = [_dataManager virtualComponentIdWithIndexPath:indexPath];
@@ -331,7 +331,7 @@ WX_EXPORT_METHOD(@selector(setListData:))
 
 - (void)removeData:(NSInteger)index count:(NSInteger)count
 {
-    // TODO: bring the update logic to UpdateManager
+    // TODO: bring the update logic to UpdateManager id:143
     
     NSMutableArray *newListData = [[_dataManager data] mutableCopy];
     if (index > [newListData count] || index + count - 1 > [newListData count]) {
@@ -356,7 +356,7 @@ WX_EXPORT_METHOD(@selector(setListData:))
 
 - (void)moveData:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
 {
-    // TODO: bring the update logic to UpdateManager
+    // TODO: bring the update logic to UpdateManager id:63
     NSMutableArray *newListData = [[_dataManager data] mutableCopy];
     id data = newListData[fromIndex];
     [newListData removeObjectAtIndex:fromIndex];
@@ -389,7 +389,7 @@ WX_EXPORT_METHOD(@selector(setListData:))
             [_templateManager addTemplate:cell];
         }];
         
-        //TODO: update collection view if adding template
+        //TODO: update collection view if adding template id:116
     }
 }
 
@@ -520,7 +520,7 @@ WX_EXPORT_METHOD(@selector(setListData:))
         cellComponent = [_templateManager dequeueCellSlotWithType:templateType forIndexPath:indexPath];
         cellView.wx_component = cellComponent;
         WXPerformBlockOnComponentThread(^{
-            //TODO: How can we avoid this?
+            //TODO: How can we avoid this? id:65
             [super _insertSubcomponent:cellComponent atIndex:self.subcomponents.count];
         });
     }

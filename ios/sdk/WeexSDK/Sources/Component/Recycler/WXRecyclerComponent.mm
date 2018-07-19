@@ -66,7 +66,7 @@ typedef enum : NSUInteger {
 
 - (void)setContentOffset:(CGPoint)contentOffset
 {
-    // FIXME: side effect caused by hooking _adjustContentOffsetIfNecessary.
+    // FIXME: side effect caused by hooking _adjustContentOffsetIfNecessary. id:144
     // When UICollectionView is pulled down and finger releases，contentOffset will be set from -xxxx to about -0.5(greater than -0.5), then contentOffset will be reset to zero by calling _adjustContentOffsetIfNecessary.
     // So hooking _adjustContentOffsetIfNecessary will always cause remaining 1px space between list's top and navigator.
     // Demo: http://dotwe.org/895630945793a9a044e49abe39cbb77f
@@ -128,7 +128,7 @@ typedef enum : NSUInteger {
         [self _fillPadding];
         
         if ([type isEqualToString:@"waterfall"] || (attributes[@"layout"] && [attributes[@"layout"] isEqualToString:@"multi-column"])) {
-            // TODO: abstraction
+            // TODO: abstraction id:66
             _layoutType = WXRecyclerLayoutTypeMultiColumn;
             CGFloat scaleFactor = weexInstance.pixelScaleFactor;
             _collectionViewlayout = [WXMultiColumnLayout new];
@@ -328,7 +328,7 @@ typedef enum : NSUInteger {
 {
     WXAssertMainThread();
     
-    //TODO: support completion
+    //TODO: support completion id:117
     
     if (![self isViewLoaded]) {
         completion(NO);
@@ -705,7 +705,7 @@ typedef enum : NSUInteger {
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // FIXME:(ง •̀_•́)ง┻━┻ Stupid scoll view, always reset content offset to zero by calling _adjustContentOffsetIfNecessary after insert cells.
+        // FIXME: (ง •̀_•́)ง┻━┻ Stupid scoll view, always reset content offset to zero by calling _adjustContentOffsetIfNecessary after insert cells. id:70
         // So if you pull down list while list is rendering, the list will be flickering.
         // Demo:
         // Have to hook _adjustContentOffsetIfNecessary here.

@@ -29,7 +29,7 @@ describe('weex '+goal+' test', function () {
       .waitForElementByName('Zechang-Xie', timeout, 2000)
       .waitForElementByName('runMethod', timeout, 2000)
       .waitForElementByName('promise support', timeout, 2000)
-      //TODO rect compare
+      //TODO rect compare id:128
       .waitForElementByName('styleChange', timeout, 2000)
       .waitForElementByName('classChange', timeout, 2000)
   })

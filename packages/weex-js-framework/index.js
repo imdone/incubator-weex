@@ -952,7 +952,7 @@ var TO_STRING_TAG = wks('toStringTag');
 var ArrayValues = Iterators$1.Array;
 
 var DOMIterables = {
-  CSSRuleList: true, // TODO: Not spec compliant, should be false.
+  CSSRuleList: true, // TODO: Not spec compliant, should be false. id:120
   CSSStyleDeclaration: false,
   CSSValueList: false,
   ClientRectList: false,
@@ -965,7 +965,7 @@ var DOMIterables = {
   HTMLCollection: false,
   HTMLFormElement: false,
   HTMLSelectElement: false,
-  MediaList: true, // TODO: Not spec compliant, should be false.
+  MediaList: true, // TODO: Not spec compliant, should be false. id:84
   MimeTypeArray: false,
   NamedNodeMap: false,
   NodeList: true,
@@ -979,7 +979,7 @@ var DOMIterables = {
   SVGStringList: false,
   SVGTransformList: false,
   SourceBufferList: false,
-  StyleSheetList: true, // TODO: Not spec compliant, should be false.
+  StyleSheetList: true, // TODO: Not spec compliant, should be false. id:74
   TextTrackCueList: false,
   TextTrackList: false,
   TouchList: false
@@ -2166,7 +2166,7 @@ CallbackManager.prototype.remove = function remove (callbackId) {
   return callback
 };
 CallbackManager.prototype.registerHook = function registerHook (componentId, type, hookName, hookFunction) {
-  // TODO: validate arguments
+  // TODO: validate arguments id:148
   var key = getHookKey(componentId, type, hookName);
   if (this.hooks[key]) {
     console.warn(("[JS Framework] Override an existing component hook \"" + key + "\"."));
@@ -2176,7 +2176,7 @@ CallbackManager.prototype.registerHook = function registerHook (componentId, typ
 CallbackManager.prototype.triggerHook = function triggerHook (componentId, type, hookName, options) {
     if ( options === void 0 ) options = {};
 
-  // TODO: validate arguments
+  // TODO: validate arguments id:75
   var key = getHookKey(componentId, type, hookName);
   var hookFunction = this.hooks[key];
   if (typeof hookFunction !== 'function') {
@@ -4537,7 +4537,7 @@ function adaptMethod (methodName, sharedMethod) {
       sharedMethod.apply(void 0, args);
     }
 
-    // TODO: deprecated
+    // TODO: deprecated id:121
     for (var name in runtimeConfig.frameworks) {
       var framework = runtimeConfig.frameworks[name];
       if (framework && framework[methodName]) {
@@ -9245,7 +9245,7 @@ function updateVirtualComponent (vnode) {
   }
   vm._vnode = vnode;
   if (vm._isMounted && componentId) {
-    // TODO: data should be filtered and without bindings
+    // TODO: data should be filtered and without bindings id:85
     var data = Object.assign({}, vm._data);
     updateComponentData(componentId, data, function () {
       callHook(vm, 'updated');
@@ -9265,7 +9265,7 @@ function resolveVirtualComponent (vnode) {
     beforeCreate: function beforeCreate () {
       // const vm: Component = this
 
-      // TODO: listen on all events and dispatch them to the
+      // TODO: listen on all events and dispatch them to the id:78
       // corresponding virtual components according to the componentId.
       // vm._virtualComponents = {}
       var createVirtualComponent = function (componentId, propsData) {
@@ -10237,7 +10237,7 @@ function initGlobalAPI (Vue) {
   Object.defineProperty(Vue, 'config', configDef);
 
   // exposed util methods.
-  // NOTE: these are not considered part of the public API - avoid relying on
+  // NOTE: these are not considered part of the public API - avoid relying on id:151
   // them unless you are aware of the risk.
   Vue.util = {
     warn: warn,
@@ -12281,7 +12281,7 @@ var TransitionGroup = {
       prevChildren.forEach(function (c) {
         c.data.transition = transitionData;
 
-        // TODO: record before patch positions
+        // TODO: record before patch positions id:77
 
         if (map[c.key]) {
           kept.push(c);
@@ -12315,7 +12315,7 @@ var TransitionGroup = {
       return
     }
 
-    // TODO: finish implementing move animations once
+    // TODO: finish implementing move animations once id:122
     // we have access to sync getComponentRect()
 
     // children.forEach(callPendingCbs)
@@ -19037,7 +19037,7 @@ function dispatchEventToInstance(event, targetOrigin) {
       instance = instances[i];
       if (targetOrigin === '*' || targetOrigin === instance.origin) {
         event.target = instance.window;
-        // FIXME: Need async?
+        // FIXME: Need async? id:88
         instance.window.dispatchEvent(event);
       }
     }
@@ -19352,7 +19352,7 @@ function createInstance(instanceId, __weex_code__, __weex_options__, __weex_data
           origin: location.origin,
           data: JSON.parse(JSON.stringify(message)),
           type: 'message',
-          source: window // FIXME: maybe not export window
+          source: window // FIXME: maybe not export window id:79
         };
         dispatchEventToInstance(event, targetOrigin);
       },
@@ -19532,7 +19532,7 @@ function receiveTasks(instanceId, tasks) {
   }
 }
 
-// FIXME: Hack for rollup build "import Rax from 'weex-rax-framework'", in rollup if `module.exports` has `__esModule` key must return by export default
+// FIXME: Hack for rollup build "import Rax from 'weex-rax-framework'", in rollup if `module.exports` has `__esModule` key must return by export default id:153
 exports.default = exports;
 
 /***/ }),
@@ -19832,7 +19832,7 @@ Object.defineProperty(exports, "__esModule", {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 function shouldUpdateComponent(prevElement, nextElement) {
-  // TODO: prevElement and nextElement could be array
+  // TODO: prevElement and nextElement could be array id:80
   var prevEmpty = prevElement === null;
   var nextEmpty = nextElement === null;
   if (prevEmpty || nextEmpty) {
@@ -20044,7 +20044,7 @@ function flattenStyle(style) {
   }
 }
 
-// TODO: move to weex-drvier
+// TODO: move to weex-drvier id:123
 function filterProps(type, props) {
   // Only for weex text
   if (type === 'text') {
@@ -20753,7 +20753,7 @@ var NativeComponent = function () {
               }
 
               nextChild.mountComponent(parent, _this2._instance, context, function (newChild, parent) {
-                // TODO: Rework the duplicate code
+                // TODO: Rework the duplicate code id:90
                 var oldChild = oldNodes[_name2];
                 if (!Array.isArray(newChild)) {
                   newChild = [newChild];
@@ -21878,7 +21878,7 @@ var CompositeComponent = function () {
       // Init state, must be set to an object or null
       var initialState = instance.state;
       if (initialState === undefined) {
-        // TODO clone the state?
+        // TODO clone the state? id:82
         instance.state = initialState = null;
       }
 
@@ -22068,7 +22068,7 @@ var CompositeComponent = function () {
       var shouldUpdate = true;
       var prevProps = instance.props;
       var prevState = instance.state;
-      // TODO: could delay execution processPendingState
+      // TODO: could delay execution processPendingState id:160
       var nextState = this._processPendingState(nextProps, nextContext);
 
       // ShouldComponentUpdate is not called when forceUpdate is used
@@ -22165,7 +22165,7 @@ var CompositeComponent = function () {
 
         this._renderedComponent = (0, _instantiateComponent2.default)(nextRenderedElement);
         this._renderedComponent.mountComponent(this._parent, instance, this._processChildContext(context), function (newChild, parent) {
-          // TODO: Duplicate code in native component file
+          // TODO: Duplicate code in native component file id:83
           if (!Array.isArray(newChild)) {
             newChild = [newChild];
           }
@@ -22772,7 +22772,7 @@ var Driver = {
     return node.setAttr(propKey, propValue, false);
   },
   setStyles: function setStyles(node, styles) {
-    // TODO if more then one style update, call setStyles will be better performance
+    // TODO if more then one style update, call setStyles will be better performance id:124
     for (var key in styles) {
       var val = styles[key];
       val = (0, _styleUnit.convertUnit)(val, key);
@@ -24925,7 +24925,7 @@ function IDNAToASCII(h) {
   if ('' == h) {
     invalid.call(this);
   }
-  // XXX
+  // XXX  id:93
   return h.toLowerCase();
 }
 
@@ -24940,7 +24940,7 @@ function percentEscape(c) {
 }
 
 function percentEscapeQuery(c) {
-  // XXX This actually needs to encode c using encoding and then
+  // XXX This actually needs to encode c using encoding and then id:86
   // convert the bytes one-by-one.
 
   var unicode = c.charCodeAt(0);
@@ -25028,7 +25028,7 @@ function parse(input, stateOverride, base) {
           this$1._fragment = '#';
           state = 'fragment';
         } else {
-          // XXX error handling
+          // XXX error handling id:162
           if (EOF != c && '\t' != c && '\n' != c && '\r' != c) {
             this$1._schemeData += percentEscape(c);
           }
@@ -25164,7 +25164,7 @@ function parse(input, stateOverride, base) {
               err('Invalid whitespace in authority.');
               continue;
             }
-            // XXX check URL code points
+            // XXX check URL code points id:87
             if (':' == cp && null === this$1._password) {
               this$1._password = '';
               continue;
@@ -25205,7 +25205,7 @@ function parse(input, stateOverride, base) {
       case 'host':
       case 'hostname':
         if (':' == c && !seenBracket) {
-          // XXX host parsing
+          // XXX host parsing id:125
           this$1._host = IDNAToASCII.call(this$1, buffer);
           buffer = '';
           state = 'port';
@@ -26034,7 +26034,7 @@ module.exports = function (__weex_require__, Promise) {
     if (typeof name !== 'string') {
       name = String(name);
     }
-    // FIXME: In spdy the response header has name like ":version" that is invalid
+    // FIXME: In spdy the response header has name like ":version" that is invalid id:96
     // if (/[^a-z0-9\-#$%&'*+.\^_`|~]/i.test(name)) {
     //   throw new TypeError('Invalid character in header field name');
     // }
@@ -26456,7 +26456,7 @@ module.exports = function (__weex_require__) {
       value: function abort() {
         this._aborted = true;
 
-        // TODO: Weex native not support abort now
+        // TODO: Weex native not support abort now id:89
 
         // only call onreadystatechange if there is something to abort,
         // below logic is per spec
@@ -27119,7 +27119,7 @@ module.exports = function (responseEnd) {
   var _performance$timing;
 
   var performance = {};
-  // TODO: current can not get navigationStart time
+  // TODO: current can not get navigationStart time id:163
   performance.timing = (_performance$timing = {
     unloadEventStart: 0,
     unloadEventEnd: 0,

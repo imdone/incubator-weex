@@ -528,7 +528,7 @@ public class BoxShadowUtil {
       RectF rectF = new RectF(bounds);
       border.addRoundRect(rectF, radii, Path.Direction.CCW);
       canvas.clipPath(border);
-      //TODO: we need clip border-width too
+      //TODO: we need clip border-width too id:53
 
       // translate the canvas to the right place and then draw the inner shadow
       canvas.translate(bounds.left, bounds.top);

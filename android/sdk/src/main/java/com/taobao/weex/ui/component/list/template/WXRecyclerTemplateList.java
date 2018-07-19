@@ -106,7 +106,7 @@ public class WXRecyclerTemplateList extends WXVContainer<BounceRecyclerView> imp
     private static final String NAME_ITEM_VIEW_CACHE_SIZE = "itemViewCacheSize";
     private static final String NAME_TEMPLATE_CACHE_SIZE = "templateCacheSize";
 
-    // TODO
+    // TODO  id:38
 //    private WXRecyclerDomObject mDomObject;
     protected int mLayoutType = WXRecyclerView.TYPE_LINEAR_LAYOUT;
     protected int mColumnCount = 1;
@@ -220,7 +220,7 @@ public class WXRecyclerTemplateList extends WXVContainer<BounceRecyclerView> imp
          * list has layout and can archive better user experience and better load time,
          * which reduce waste cell layout when list layout changes.
          * */
-        // TODO
+        // TODO  id:41
 //        if(mDomObject != null
 //                && mDomObject.getCellList() != null
 //                && mDomObject.getCellList().size() > 0){
@@ -666,7 +666,7 @@ public class WXRecyclerTemplateList extends WXVContainer<BounceRecyclerView> imp
                     }
                 }
                 if(key != null){
-                    // TODO
+                    // TODO  id:42
 //                    if(child.getDomObject() instanceof  WXCellDomObject
 //                            && getDomObject() instanceof  WXRecyclerDomObject){
 //                        WXCellDomObject domObject = (WXCellDomObject) child.getDomObject();

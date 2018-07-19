@@ -72,7 +72,7 @@ public abstract class WidgetContainer<T extends ViewGroup> extends WXVContainer<
           uiImp.register(child, (AndroidViewWidget) flatChild);
           child.createView();
           ((AndroidViewWidget) flatChild).setContentView(child.getHostView());
-          //TODO Use a sort algorithm to decide the childIndex of AndroidViewWidget
+          //TODO Use a sort algorithm to decide the childIndex of AndroidViewWidget id:44
           parent.addSubView(child.getHostView(), -1);
         }
         uiImp.register(flatChild, child);
@@ -92,7 +92,7 @@ public abstract class WidgetContainer<T extends ViewGroup> extends WXVContainer<
     } else {
       widgets.add(index, widget);
     }
-    //TODO do a partial update, not mount the whole flatContainer.
+    //TODO do a partial update, not mount the whole flatContainer. id:43
     mountFlatGUI();
   }
 }

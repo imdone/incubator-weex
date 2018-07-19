@@ -44,7 +44,7 @@ public final class PDF417ScanningDecoder {
   private PDF417ScanningDecoder() {
   }
 
-  // TODO don't pass in minCodewordWidth and maxCodewordWidth, pass in barcode columns for start and stop pattern
+  // TODO don't pass in minCodewordWidth and maxCodewordWidth, pass in barcode columns for start and stop pattern id:21
   // columns. That way width can be deducted from the pattern column.
   // This approach also allows to detect more details about the barcode, e.g. if a bar type (white or black) is wider 
   // than it should be. This can happen if the scanner used a bad blackpoint.
@@ -101,7 +101,7 @@ public final class PDF417ScanningDecoder {
       detectionResult.setDetectionResultColumn(barcodeColumn, detectionResultColumn);
       int startColumn = -1;
       int previousStartColumn = startColumn;
-      // TODO start at a row for which we know the start position, then detect upwards and downwards from there.
+      // TODO start at a row for which we know the start position, then detect upwards and downwards from there. id:35
       for (int imageRow = boundingBox.getMinY(); imageRow <= boundingBox.getMaxY(); imageRow++) {
         startColumn = getStartColumn(detectionResult, barcodeColumn, imageRow, leftToRight);
         if (startColumn < 0 || startColumn > boundingBox.getMaxX()) {
@@ -429,7 +429,7 @@ public final class PDF417ScanningDecoder {
       endColumn = startColumn;
       startColumn = endColumn - codewordBitCount;
     }
-    // TODO implement check for width and correction of black and white bars
+    // TODO implement check for width and correction of black and white bars id:130
     // use start (and maybe stop pattern) to determine if blackbars are wider than white bars. If so, adjust.
     // should probably done only for codewords with a lot more than 17 bits. 
     // The following fixes 10-1.png, which has wide black bars and small white bars

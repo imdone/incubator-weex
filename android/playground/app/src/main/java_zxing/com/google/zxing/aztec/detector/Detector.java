@@ -147,9 +147,9 @@ public final class Detector {
   }
 
   private static final int[] EXPECTED_CORNER_BITS = {
-      0xee0,  // 07340  XXX .XX X.. ...
-      0x1dc,  // 00734  ... XXX .XX X..
-      0x83b,  // 04073  X.. ... XXX .XX
+      0xee0,  // 07340  XXX .XX X.. ... id:2
+      0x1dc,  // 00734  ... XXX .XX X.. id:6
+      0x83b,  // 04073  X.. ... XXX .XX id:1
       0x707,  // 03407 .XX X.. ... XXX
   };
 

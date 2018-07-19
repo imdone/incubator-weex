@@ -35,7 +35,7 @@ public class WXServiceManager {
         String param1 = "register: global.registerService, unregister: global.unregisterService";
         String param2 = "serviceName: \"" + name + "\"";
         for (String key: options.keySet()) {
-            // TODO - why always string?
+            // TODO - why always string? id:23
             Object value = options.get(key);
             if (value instanceof  String) {
                 param2 += ", \'" + key + "\': \'" + value + "\'";

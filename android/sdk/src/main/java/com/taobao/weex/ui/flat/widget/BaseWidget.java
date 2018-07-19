@@ -35,8 +35,8 @@ import com.taobao.weex.utils.WXViewUtils;
 @RestrictTo(Scope.LIBRARY)
 abstract class BaseWidget implements Widget {
 
-  //TODO Reconsider the field parameter in this class and the operation during draw(); Make a CPU/Memory balance.
-  //TODO use float to avoid 1px problem
+  //TODO Reconsider the field parameter in this class and the operation during draw(); Make a CPU/Memory balance. id:45
+  //TODO use float to avoid 1px problem id:46
   private BorderDrawable backgroundBorder;
   private int leftOffset, topOffset, rightOffset, bottomOffset;
   private Rect borderBox = new Rect();
@@ -69,8 +69,8 @@ abstract class BaseWidget implements Widget {
 
   @Override
   public void setBackgroundAndBorder(@NonNull BorderDrawable backgroundBorder) {
-    //TODO Change the code of BorderDrawable is more appropriate as it draws the borderLine from (0,0) not from getBounds
-    //TODO If the above is finished, no more traslate in draw in needed, only clip is enough.
+    //TODO Change the code of BorderDrawable is more appropriate as it draws the borderLine from (0,0) not from getBounds id:138
+    //TODO If the above is finished, no more traslate in draw in needed, only clip is enough. id:48
     this.backgroundBorder = backgroundBorder;
     Rect backgroundBox = new Rect(borderBox);
     backgroundBox.offset(-borderBox.left, -borderBox.top);

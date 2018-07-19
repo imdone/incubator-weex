@@ -24,7 +24,7 @@ describe('weex '+goal+' test @ignore-android', function () {
   })
 
   it('#1 '+goal + ' event', () => {
-    //TODO ：截图比对
+    //TODO ：截图比对 id:129
     return driver.waitForElementByName('generate', timeout, 2000)
       .click()
       .waitForElementByName('coverage success', timeout, 2000) 

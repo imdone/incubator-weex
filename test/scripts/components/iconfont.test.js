@@ -25,7 +25,7 @@ describe('weex '+goal+' test', function () {
   })
 
   it('#1 '+goal + ' event', () => {
-    //TODO ：截图比对
+    //TODO ：截图比对 id:101
     return driver.waitForElementByName('change', interval, 2000)
       .waitForElementByName(goal, interval, 2000)
       .click()

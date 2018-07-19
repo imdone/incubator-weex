@@ -109,7 +109,7 @@ static BOOL bNeedRemoveEvents = YES;
             _transition = [[WXTransition alloc]initWithStyles:styles];
         }
 
-        //TODO set indicator style 
+        //TODO set indicator style id:71
         if ([type isEqualToString:@"indicator"]) {
             _styles[@"position"] = @"absolute";
             if (!_styles[@"left"] && !_styles[@"right"]) {
@@ -326,7 +326,7 @@ static BOOL bNeedRemoveEvents = YES;
             [self.supercomponent _recomputeCSSNodeChildren];
             WXPerformBlockOnMainThread(^{
                 [self _buildViewHierarchyLazily];
-                // TODO: insert into the correct index
+                // TODO: insert into the correct index id:119
                 [self.supercomponent.view addSubview:self.view];
             });
         }
