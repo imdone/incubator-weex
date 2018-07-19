@@ -227,7 +227,7 @@ WX_EXPORT_METHOD(@selector(fetchWithArrayBuffer:options:callback:progressCallbac
     if ([responseType isEqualToString:@"json"] || [responseType isEqualToString:@"jsonp"]) {
         //handle json format
         if ([responseType isEqualToString:@"jsonp"]) {
-            //TODO: to be more elegant
+            //TODO: to be more elegant id:147
             NSUInteger start = [responseData rangeOfString:@"("].location + 1 ;
             NSUInteger end = [responseData rangeOfString:@")" options:NSBackwardsSearch].location;
             if (end < [responseData length] && end > start) {
@@ -425,7 +425,7 @@ WX_EXPORT_METHOD(@selector(fetchWithArrayBuffer:options:callback:progressCallbac
     
     NSURL *url = [NSURL URLWithString:urlStr];
     
-    //TODO:referrer
+    //TODO: referrer id:73
     WXResourceRequest *request = [WXResourceRequest requestWithURL:url resourceType:WXResourceTypeOthers referrer:nil cachePolicy:NSURLRequestUseProtocolCachePolicy];
     request.HTTPMethod = method;
     request.timeoutInterval = 60.0;

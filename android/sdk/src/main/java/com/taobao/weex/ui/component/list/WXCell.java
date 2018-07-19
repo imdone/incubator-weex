@@ -77,7 +77,7 @@ public class WXCell extends WidgetContainer<WXFrameLayout> {
         lazy(true);
         if(Build.VERSION.SDK_INT< Build.VERSION_CODES.LOLLIPOP) {
             try {
-                //TODO a WTF is necessary if anyone try to change the flat flag during update attrs.
+                //TODO a WTF is necessary if anyone try to change the flat flag during update attrs. id:136
                 WXAttr attr = getAttrs();
                 if (attr.containsKey(Constants.Name.FLAT)) {
                     mFlatUIEnabled = WXUtils.getBoolean(attr.get(Constants.Name.FLAT), false);
@@ -108,7 +108,7 @@ public class WXCell extends WidgetContainer<WXFrameLayout> {
             WXFrameLayout view = new WXFrameLayout(context);
             mRealView = new WXFrameLayout(context);
             view.addView(mRealView);
-            //TODO Maybe there is a better solution for hardware-acceleration view's display list.
+            //TODO Maybe there is a better solution for hardware-acceleration view's display list. id:37
             if (isFlatUIEnabled()) {
                 view.setLayerType(View.LAYER_TYPE_HARDWARE, null);
             }

@@ -62,7 +62,7 @@
 
 - (void)setContentOffset:(CGPoint)contentOffset
 {
-    // FIXME: side effect caused by hooking _adjustContentOffsetIfNecessary.
+    // FIXME: side effect caused by hooking _adjustContentOffsetIfNecessary. id:145
     // When UITableView is pulled down and finger releases，contentOffset will be set from -xxxx to about -0.5(greater than -0.5), then contentOffset will be reset to zero by calling _adjustContentOffsetIfNecessary.
     // So hooking _adjustContentOffsetIfNecessary will always cause remaining 1px space between list's top and navigator.
     // Demo: http://dotwe.org/895630945793a9a044e49abe39cbb77f
@@ -962,7 +962,7 @@
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        // FIXME:(ง •̀_•́)ง┻━┻ Stupid scoll view, always reset content offset to zero by calling _adjustContentOffsetIfNecessary after insert cells.
+        // FIXME: (ง •̀_•́)ง┻━┻ Stupid scoll view, always reset content offset to zero by calling _adjustContentOffsetIfNecessary after insert cells. id:68
         // So if you pull down list while list is rendering, the list will be flickering.
         // Demo:    
         // Have to hook _adjustContentOffsetIfNecessary here.

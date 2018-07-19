@@ -85,7 +85,7 @@ public class WXThread extends HandlerThread {
 
   /**
    * Secure Runnable to prevent throw during execution.
-   * NOTE: DO NOT use this method to wrap runnable that may be removed by {@link Handler#removeCallbacks(Runnable)}
+   * NOTE: DO NOT use this method to wrap runnable that may be removed by {@link Handler#removeCallbacks(Runnable)} id:135
    * @param runnable
    * @return
    */

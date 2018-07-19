@@ -333,14 +333,14 @@ public class WXPerformance {
    */
 
   /**
-   * TODO These dimensions will be moved to elsewhere
+   * TODO These dimensions will be moved to elsewhere id:36
    */
   @RestrictTo(RestrictTo.Scope.LIBRARY)
   @Deprecated
   public String wxDims[] = new String[5];
 
   /**
-   * TODO These dimensions will be moved to elsewhere
+   * TODO These dimensions will be moved to elsewhere id:133
    */
   @RestrictTo(RestrictTo.Scope.LIBRARY)
   @Deprecated
@@ -411,7 +411,7 @@ public class WXPerformance {
     quotas.put(Measure.cssLayoutTime.toString(), (double) cssLayoutTime);
     quotas.put(Measure.parseJsonTime.toString(), (double) parseJsonTime);
 
-    // TODO the following attribute is no longer needed and will be deleted soon.
+    // TODO the following attribute is no longer needed and will be deleted soon. id:26
     quotas.put(Measure.screenRenderTime.toString(), (double) screenRenderTime);
     quotas.put(Measure.communicateTime.toString(), (double) communicateTime);
     quotas.put(Measure.localReadTime.toString(), localReadTime);
@@ -421,7 +421,7 @@ public class WXPerformance {
     quotas.put(Measure.syncTaskTime.toString(), (double) syncTaskTime);
     quotas.put(Measure.packageSpendTime.toString(), (double) packageSpendTime);
 
-    // TODO These attribute will be moved to elsewhere
+    // TODO These attribute will be moved to elsewhere id:29
     quotas.put(Measure.measureTime1.toString(), (double) measureTimes[0]);
     quotas.put(Measure.measureTime2.toString(), (double) measureTimes[1]);
     quotas.put(Measure.measureTime3.toString(), (double) measureTimes[2]);
@@ -442,7 +442,7 @@ public class WXPerformance {
     quotas.put(Dimension.cacheType.toString(), cacheType);
     quotas.put(Dimension.useScroller.toString(), String.valueOf(useScroller));
 
-    // TODO These attribute will be moved to elsewhere
+    // TODO These attribute will be moved to elsewhere id:28
     // Extra Dimension for 3rd developers.
     quotas.put(Dimension.wxdim1.toString(), wxDims[0]);
     quotas.put(Dimension.wxdim2.toString(), wxDims[1]);
@@ -450,7 +450,7 @@ public class WXPerformance {
     quotas.put(Dimension.wxdim4.toString(), wxDims[3]);
     quotas.put(Dimension.wxdim5.toString(), wxDims[4]);
 
-    // TODO the following attribute is no longer needed and will be deleted soon.
+    // TODO the following attribute is no longer needed and will be deleted soon. id:39
     quotas.put(Dimension.bizType.toString(), bizType);
     quotas.put(Dimension.templateUrl.toString(), templateUrl);
     return quotas;

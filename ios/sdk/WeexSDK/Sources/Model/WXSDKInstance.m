@@ -284,7 +284,7 @@ typedef enum : NSUInteger {
         mainBundleString = [WXDebugTool getReplacedBundleJS];
     }
     
-    //TODO WXRootView
+    //TODO WXRootView id:81
     WXPerformBlockOnMainThread(^{
         _rootView = [[WXRootView alloc] initWithFrame:self.frame];
         _rootView.instance = self;
@@ -456,7 +456,7 @@ typedef enum : NSUInteger {
 
 - (void)reload:(BOOL)forcedReload
 {
-    // TODO: [self unload]
+    // TODO: [self unload] id:72
     if (!_scriptURL) {
         WXLogError(@"No script URL found while reloading!");
         return;

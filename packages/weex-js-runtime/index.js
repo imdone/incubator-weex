@@ -947,7 +947,7 @@ var TO_STRING_TAG = wks('toStringTag');
 var ArrayValues = Iterators$1.Array;
 
 var DOMIterables = {
-  CSSRuleList: true, // TODO: Not spec compliant, should be false.
+  CSSRuleList: true, // TODO: Not spec compliant, should be false. id:91
   CSSStyleDeclaration: false,
   CSSValueList: false,
   ClientRectList: false,
@@ -960,7 +960,7 @@ var DOMIterables = {
   HTMLCollection: false,
   HTMLFormElement: false,
   HTMLSelectElement: false,
-  MediaList: true, // TODO: Not spec compliant, should be false.
+  MediaList: true, // TODO: Not spec compliant, should be false. id:126
   MimeTypeArray: false,
   NamedNodeMap: false,
   NodeList: true,
@@ -974,7 +974,7 @@ var DOMIterables = {
   SVGStringList: false,
   SVGTransformList: false,
   SourceBufferList: false,
-  StyleSheetList: true, // TODO: Not spec compliant, should be false.
+  StyleSheetList: true, // TODO: Not spec compliant, should be false. id:99
   TextTrackCueList: false,
   TextTrackList: false,
   TouchList: false

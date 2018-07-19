@@ -40,8 +40,8 @@ final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
     }
   }
 
-  // TODO implement properly
-  // TODO maybe we should add missing codewords to store the correct row number to make
+  // TODO implement properly id:14
+  // TODO maybe we should add missing codewords to store the correct row number to make id:17
   // finding row numbers for other columns easier
   // use row height count to make detection of invalid row numbers more reliable
   int adjustCompleteIndicatorColumnRowNumbers(BarcodeMetadata barcodeMetadata) {
@@ -75,7 +75,7 @@ final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
 
       int rowDifference = codeword.getRowNumber() - barcodeRow;
 
-      // TODO improve handling with case where first row indicator doesn't start with 0
+      // TODO improve handling with case where first row indicator doesn't start with 0 id:33
 
       if (rowDifference == 0) {
         currentRowHeight++;
@@ -131,7 +131,7 @@ final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
     return result;
   }
 
-  // TODO maybe we should add missing codewords to store the correct row number to make
+  // TODO maybe we should add missing codewords to store the correct row number to make id:20
   // finding row numbers for other columns easier
   // use row height count to make detection of invalid row numbers more reliable
   int adjustIncompleteIndicatorColumnRowNumbers(BarcodeMetadata barcodeMetadata) {
@@ -155,7 +155,7 @@ final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
 
       int rowDifference = codeword.getRowNumber() - barcodeRow;
 
-      // TODO improve handling with case where first row indicator doesn't start with 0
+      // TODO improve handling with case where first row indicator doesn't start with 0 id:19
 
       if (rowDifference == 0) {
         currentRowHeight++;
@@ -220,7 +220,7 @@ final class DetectionResultRowIndicatorColumn extends DetectionResultColumn {
 
   private void removeIncorrectCodewords(Codeword[] codewords, BarcodeMetadata barcodeMetadata) {
     // Remove codewords which do not match the metadata
-    // TODO Maybe we should keep the incorrect codewords for the start and end positions?
+    // TODO Maybe we should keep the incorrect codewords for the start and end positions? id:18
     for (int codewordRow = 0; codewordRow < codewords.length; codewordRow++) {
       Codeword codeword = codewords[codewordRow];
       if (codewords[codewordRow] == null) {

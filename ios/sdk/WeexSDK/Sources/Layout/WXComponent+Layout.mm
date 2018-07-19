@@ -542,7 +542,7 @@ static WeexCore::WXCoreSize flexCssNodeMeasure(WeexCore::WXCoreLayoutNode *node,
     return WeexCore::kFlexDirectionColumn;
 }
 
-//TODO
+//TODO  id:146
 - (WeexCore::WXCoreAlignItems)fxAlign:(id)value
 {
     if([value isKindOfClass:[NSString class]]){

@@ -135,7 +135,7 @@ public class DefaultWXHttpAdapter implements IWXHttpAdapter {
         }
         connection.setDoOutput(true);
         DataOutputStream out = new DataOutputStream(connection.getOutputStream());
-        //TODO big stream will cause OOM; Progress callback is meaningless
+        //TODO big stream will cause OOM; Progress callback is meaningless id:25
         out.write(request.body.getBytes());
         out.close();
         if (listener != null) {

@@ -90,7 +90,7 @@ public class WXEditText extends EditText implements WXGestureObservable {
     super.onSizeChanged(w, h, oldw, oldh);
     if (getLayout() != null) {
       int contentH = getLayout().getHeight();
-      //TODO: known issue,set movement to null will make cursor disappear.
+      //TODO: known issue,set movement to null will make cursor disappear. id:47
       if (mAllowDisableMovement && h < contentH) {
         setMovementMethod(null);
       } else {

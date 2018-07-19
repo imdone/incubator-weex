@@ -137,7 +137,7 @@ IPCSender *WeexJSConnection::start(IPCHandler *handler, bool reinit) {
       m_impl->futexPageQueue->spinWaitPeer();
     } catch (IPCException &e) {
       LOGE("WeexJSConnection catch: %s", e.msg());
-      // TODO throw exception
+      // TODO throw exception id:167
       return nullptr;
     }
   }

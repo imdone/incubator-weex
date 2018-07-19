@@ -20,12 +20,12 @@
         this.$emit('click')
       },
       touchstart: function() {
-        // FIXME android touch
-        // TODO adaptive opposite bgColor
+        // FIXME android touch id:114
+        // TODO adaptive opposite bgColor id:59
         // this.bgColor = '#e6e6e6';
       },
       touchend: function() {
-        // FIXME android touchend not triggered
+        // FIXME android touchend not triggered id:58
         // this.bgColor = '#ffffff';
       }
     }

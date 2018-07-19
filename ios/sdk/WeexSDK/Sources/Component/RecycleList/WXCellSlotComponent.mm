@@ -36,7 +36,7 @@
 {
     self = [super initWithRef:ref type:type styles:styles attributes:attributes events:events weexInstance:weexInstance];
     if (self) {
-        // TODO: isRecycle / insertAnimation / deleteAnimation / keepScrollPosition
+        // TODO: isRecycle / insertAnimation / deleteAnimation / keepScrollPosition id:60
         if (attributes[@"default"]) {
             _templateCaseType = @"default";
         }

@@ -91,7 +91,7 @@ int modp_b64_decode(char *dest, const char *src, int len);
  * Given a base64 string of length len,
  *   this returns the amount of memory required for output string
  *  It maybe be more than the actual number of bytes written.
- * NOTE: remember this is integer math
+ * NOTE: remember this is integer math id:105
  * this allocates a bit more memory than traditional versions of b64
  * decode  4 chars turn into 3 bytes
  * floor[len * 3/4] + 2

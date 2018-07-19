@@ -867,7 +867,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
         if (mRippleBackground == null) {
           WXViewUtils.setBackGround(mHost, mBackgroundDrawable);
         } else {
-          //TODO Not strictly clip according to background-clip:border-box
+          //TODO Not strictly clip according to background- clip:border-box id:32
           WXViewUtils.setBackGround(mHost, new LayerDrawable(new Drawable[]{
                   mRippleBackground, mBackgroundDrawable}));
         }
@@ -1022,7 +1022,7 @@ public abstract class WXComponent<T extends View> extends WXBasicComponent imple
     widget.setLayout(width, height, left, right, top, bottom, childOffset);
 
     if (widget instanceof AndroidViewWidget && ((AndroidViewWidget) widget).getView()!=null) {
-      //TODO generic method if ever possible
+      //TODO generic method if ever possible id:34
       setHostLayoutParams((T) ((AndroidViewWidget) widget).getView(),
               width, height, childOffset.x, right, childOffset.y, bottom);
     }

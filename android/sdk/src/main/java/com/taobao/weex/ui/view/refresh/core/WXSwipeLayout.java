@@ -577,7 +577,7 @@ public class WXSwipeLayout extends FrameLayout implements NestedScrollingParent,
       @Override
       public void onAnimationEnd(Animator animation) {
         headerView.startAnimation();
-        //TODO updateLoadText
+        //TODO updateLoadText id:49
         if (onRefreshListener != null) {
           onRefreshListener.onRefresh();
         }
@@ -620,7 +620,7 @@ public class WXSwipeLayout extends FrameLayout implements NestedScrollingParent,
     mRefreshing = false;
     isConfirm = false;
     mCurrentAction = -1;
-    //TODO updateLoadText
+    //TODO updateLoadText id:139
   }
 
   /**
@@ -643,7 +643,7 @@ public class WXSwipeLayout extends FrameLayout implements NestedScrollingParent,
       @Override
       public void onAnimationEnd(Animator animation) {
         footerView.startAnimation();
-        //TODO updateLoadText
+        //TODO updateLoadText id:51
         if (onLoadingListener != null) {
           onLoadingListener.onLoading();
         }
@@ -685,7 +685,7 @@ public class WXSwipeLayout extends FrameLayout implements NestedScrollingParent,
     mRefreshing = false;
     isConfirm = false;
     mCurrentAction = -1;
-    //TODO updateLoadText
+    //TODO updateLoadText id:112
   }
 
   /**

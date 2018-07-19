@@ -245,10 +245,10 @@ public  class ScreenShot {
                     fos.close();
                 }
             } catch (FileNotFoundException e) {
-                // TODO Auto-generated catch block
+                // TODO Auto-generated catch block id:0
                 e.printStackTrace();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
+                // TODO Auto-generated catch block id:3
                 e.printStackTrace();
             }
         }
